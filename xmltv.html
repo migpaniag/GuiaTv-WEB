@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLTV - Fuentes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .xmltv-list {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            height: calc(100vh - 150px);
+            overflow-y: auto;
+        }
+        .xmltv-item {
+            background-color: var(--bg-program);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        .xmltv-item:hover {
+            background-color: var(--bg-program-hover);
+        }
+        .xmltv-name {
+            font-size: 18px;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        .xmltv-url {
+            font-size: 14px;
+            color: var(--text-secondary);
+            word-break: break-all;
+            margin-bottom: 10px;
+        }
+        .copy-button {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .copy-button:hover {
+            background-color: var(--bg-program-hover);
+        }
+        .back-button {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 15px;
+        }
+        .back-button:hover {
+            background-color: var(--bg-program-hover);
+        }
+        .xmltv-list::-webkit-scrollbar {
+            width: 12px;
+        }
+        .xmltv-list::-webkit-scrollbar-track {
+            background: var(--scrollbar-track);
+            border: 1px solid var(--border-color);
+        }
+        .xmltv-list::-webkit-scrollbar-thumb {
+            background: var(--scrollbar-thumb);
+            border-radius: 6px;
+            border: 2px solid var(--scrollbar-track);
+        }
+        .xmltv-list::-webkit-scrollbar-thumb:hover {
+            background: var(--scrollbar-thumb-hover);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <button class="back-button" onclick="window.location.href='index.html'">
+                    <i class="fas fa-arrow-left"></i> Volver
+                </button>
+                <h1>Fuentes XMLTV</h1>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-lightbulb"></i>
+                </button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="xmltv-list" id="xmltvList">
+                <!-- Los items se cargarán dinámicamente -->
+            </div>
+        </main>
+    </div>
+
+    <script src="xmltv.js"></script>
+</body>
+</html>
